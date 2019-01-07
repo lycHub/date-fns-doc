@@ -1,0 +1,31 @@
+.layout{
+  .header {
+    display: flex;
+    align-items: center;
+    .logo{
+      font-size: 20px;
+      color: #fff;
+    }
+    ul{
+      height:100%;
+      line-height: 64px;
+      color: #fff;
+      margin-left: 100px;
+    }
+  }
+
+  .layout{
+    .slider{
+      position: fixed;
+      height:100%;
+      overflow: scroll;
+
+      .menu li{
+        color: #fff;
+        span{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
