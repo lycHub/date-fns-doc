@@ -1,6 +1,6 @@
 # DateFnsDocs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+date-fns中文文档，[Angular7](https://www.angular.cn/) + [NG-ZORRO](https://ng.ant.design/docs/introduce/zh)构建
 
 ## Development server
 
