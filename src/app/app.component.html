@@ -13,12 +13,15 @@
     <nz-sider class="slider">
       <ul nz-menu [nzMode]="'inline'" [nzTheme]="'dark'" class="menu">
 
-        <li nz-submenu *ngFor="let menu of menus; trackBy: trackBySubs" [nzOpen]="menu.open">
+
+        <li nz-submenu *ngFor="let menu of menus; trackBy: trackBySubs" [nzOpen]="menu.name === currentInfo.parent">
           <span title>{{menu.title}}</span>
           <ul>
-            <li nz-menu-item *ngFor="let child of menu.children; trackBy: trackBySubChilds" [nzSelected]="child.selected" [routerLink]="child.link" (click)="onClick(child)">{{child.label}}</li>
+            <li nz-menu-item *ngFor="let child of menu.children; trackBy: trackBySubChilds" [nzSelected]="child.label === currentInfo.label" [routerLink]="child.link" (click)="onClick(child)">{{child.label}}</li>
           </ul>
         </li>
+
+
 
       </ul>
     </nz-sider>

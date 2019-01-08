@@ -9,7 +9,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   // {path: 'closestIndexTo', loadChildren: './page/common/common.module#CommonModule'}
-  {path: 'closestIndexTo', loadChildren: () => CommonModule}
+  // {path: 'closestIndexTo', loadChildren: () => CommonModule},
+  // {path: 'closestTo', loadChildren: () => CommonModule}
   // {path: '**', redirectTo: '/home'}
 ];
 
