@@ -1,3 +1,65 @@
-<p>
-  closest-index-to works!
-</p>
+<div class="closestIndexTo common">
+  <h2>closestIndexTo</h2>
+  <section class="section">
+    <h3>描述</h3>
+    <span>与给定日期相比，从数组中返回最近日期的索引。</span>
+  </section>
+
+  <section class="section">
+    <h3>返回</h3>
+    <nz-table [nzData]="dataSet">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>number</td>
+        <td>从数组中返回最近日期的索引。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </section>
+
+  <section class="section">
+    <h3>注意</h3>
+    <nz-table [nzData]="dataSet">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>TypeError</td>
+        <td>第二个参数必须是数组</td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </section>
+
+
+  <section class="section">
+    <h3>示例</h3>
+    <div class="example">
+      <nz-card>
+        <blockquote>
+          <pre>
+            // 哪个日期最接近2015-8-6
+            const dateToCompare = new Date(2015, 8, 6);
+            const datesArray = [
+              new Date(2015, 0, 1),
+              new Date(2016, 0, 1),
+              new Date(2017, 0, 1)
+            ]
+           const result = closestIndexTo(dateToCompare, datesArray)
+           //=> 1
+          </pre>
+        </blockquote>
+      </nz-card>
+    </div>
+  </section>
+</div>

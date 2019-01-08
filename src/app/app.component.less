@@ -1,19 +1,23 @@
+@import "../assets/styles/my-theme";
 .layout{
   .header {
     display: flex;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     .logo{
-      font-size: 20px;
+      font-size: @font-size-mid;
       span{
-        color: #ffffffa6;
-        font-size: 14px;
+        color: @font-dull-white;
+        font-size: @font-size-normal;
         margin-left: 10px;
       }
     }
     ul{
       height:100%;
       line-height: 64px;
-      color: #fff;
+      color: @font-white;
       margin-left: 100px;
     }
   }
@@ -21,18 +25,19 @@
   .layout{
     .slider{
       position: fixed;
+      top:64px;
       height:100%;
       overflow: scroll;
 
       .menu li{
-        color: #fff;
+        color: @font-white;
         span{
-          color: #fff;
+          color: @font-white;
         }
       }
     }
     .content{
-      background-color: #eee;
+      background-color: @bg-prev;
       padding: 20px 20px 0 0;
       margin-left: 200px;
     }

@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./closest-index-to.component.less']
 })
 export class ClosestIndexToComponent implements OnInit {
+  dataSet = [{
 
+  }];
   constructor() { }
 
   ngOnInit() {
