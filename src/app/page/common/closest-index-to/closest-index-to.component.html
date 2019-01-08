@@ -1,13 +1,7 @@
-<div class="closestIndexTo common">
-  <h2>closestIndexTo</h2>
-  <section class="section">
-    <h3>描述</h3>
-    <span>与给定日期相比，从数组中返回最近日期的索引。</span>
-  </section>
-
-  <section class="section">
-    <h3>返回</h3>
-    <nz-table [nzData]="dataSet">
+<div class="closestIndexTo">
+  <app-page-layout [hasException]="true">
+    <span class="desc">与给定日期相比，从数组中返回最近日期的索引。</span>
+    <nz-table [nzData]="dataSet" class="return">
       <thead>
       <tr>
         <th>类型</th>
@@ -21,11 +15,9 @@
       </tr>
       </tbody>
     </nz-table>
-  </section>
 
-  <section class="section">
-    <h3>注意</h3>
-    <nz-table [nzData]="dataSet">
+
+    <nz-table [nzData]="dataSet" class="exceptions">
       <thead>
       <tr>
         <th>类型</th>
@@ -39,14 +31,10 @@
       </tr>
       </tbody>
     </nz-table>
-  </section>
 
 
-  <section class="section">
-    <h3>示例</h3>
-    <div class="example">
-      <nz-card>
-        <blockquote>
+    <nz-card>
+      <blockquote>
           <pre>
             // 哪个日期最接近2015-8-6
             const dateToCompare = new Date(2015, 8, 6);
@@ -58,8 +46,7 @@
            const result = closestIndexTo(dateToCompare, datesArray)
            //=> 1
           </pre>
-        </blockquote>
-      </nz-card>
-    </div>
-  </section>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
 </div>

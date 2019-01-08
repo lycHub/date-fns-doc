@@ -1,0 +1,23 @@
+<div class="common">
+  <h2>closestIndexTo</h2>
+  <section class="section">
+    <h3>描述</h3>
+    <ng-content select=".desc"></ng-content>
+  </section>
+
+  <section class="section">
+    <h3>返回</h3>
+    <ng-content select=".return"></ng-content>
+  </section>
+
+  <section class="section" *ngIf="hasException">
+    <h3>注意</h3>
+    <ng-content select=".exceptions"></ng-content>
+  </section>
+
+
+  <section class="section">
+    <h3>示例</h3>
+    <ng-content></ng-content>
+  </section>
+</div>

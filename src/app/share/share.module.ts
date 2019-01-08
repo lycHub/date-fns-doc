@@ -2,6 +2,7 @@ import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgModule} from "@angular/core";
 import {NgZorroAntdModule} from "ng-zorro-antd";
+import {ComponentsModule} from "./components/components.module";
 
 @NgModule({
   declarations: [],
@@ -9,13 +10,15 @@ import {NgZorroAntdModule} from "ng-zorro-antd";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    ComponentsModule
   ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    ComponentsModule
   ]
 })
 export class ShareModule { }
