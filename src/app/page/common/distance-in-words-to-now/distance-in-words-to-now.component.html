@@ -1,0 +1,106 @@
+<div class="distanceInWordsToNow">
+  <app-page-layout>
+    <h2>distanceInWordsToNow</h2>
+    <div class="desc">
+      <span>以语言的形式返回给定日期与当前时间的间隔</span>
+      <nz-table #basicTable [nzData]="dataSets" [nzShowPagination]="false" [nzPageSize]="20">
+        <thead>
+        <tr>
+          <th>Distance between dates</th>
+          <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{data.distance}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+
+      <span>设置选项：includeSeconds == true</span>
+      <nz-table #secondsTable [nzData]="dataSetsWithSeconds">
+        <thead>
+        <tr>
+          <th>Distance between dates</th>
+          <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of secondsTable.data">
+          <td>{{data.distance}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+
+
+
+
+
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>String</td>
+        <td>日期间隔的描述。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 如果今天是2015-1-1，那么2014-7-2距今多久?
+          const result = distanceInWordsToNow(
+            new Date(2014, 6, 2)
+          )
+          //=> '6 months'
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+          // 如果今天是2015-1-1  00:00:00，那么2015-1-1 00:00:15距今多久？  包括秒
+          const result = distanceInWordsToNow(
+            new Date(2015, 0, 1, 0, 0, 15),
+            ｛includeSeconds: true｝
+          )
+          //=> 'less than 20 seconds'
+        </pre>
+      </blockquote>
+
+      <blockquote>
+        <pre>
+         // 如果今天是2015-1-1，那么2016-1-1距今多久？  带后缀
+          const result = distanceInWordsToNow(
+            new Date(2016, 0, 1),
+            ｛addSuffix: true｝
+          )
+          //=> 'in about 1 year'
+        </pre>
+      </blockquote>
+
+      <blockquote>
+        <pre>
+          // 如果今天是2015-1-1，那么2016-8-1距今多久？  国际化
+          const eoLocale = require('date-fns/locale/eo')
+          const result = distanceInWordsToNow(
+            new Date(2016, 7, 1),
+            ｛locale: eoLocale｝
+          )
+          //=> 'pli ol 1 jaro'
+        </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

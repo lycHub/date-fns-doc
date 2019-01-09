@@ -1,0 +1,110 @@
+<div class="distanceInWords">
+  <app-page-layout>
+    <h2>distanceInWords</h2>
+    <div class="desc">
+      <span>以语言的形式返回给定日期的间隔</span>
+      <nz-table #basicTable [nzData]="dataSets" [nzShowPagination]="false" [nzPageSize]="20">
+        <thead>
+        <tr>
+          <th>Distance between dates</th>
+          <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{data.distance}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+
+      <span>设置选项：includeSeconds == true</span>
+      <nz-table #secondsTable [nzData]="dataSetsWithSeconds">
+        <thead>
+        <tr>
+          <th>Distance between dates</th>
+          <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of secondsTable.data">
+          <td>{{data.distance}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+
+
+
+
+
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>String</td>
+        <td>给定日期的间隔描述。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // 2014-7-2与2015-1-1相隔多久？
+            const result = distanceInWords(
+              new Date(2014, 6, 2),
+              new Date(2015, 0, 1)
+            )
+            //=> '6 months'
+          </pre>
+      </blockquote>
+
+      <blockquote>
+          <pre>
+           // 2015年1月1日00:00:15到2015年1月1日00:00:00间隔多少？包括秒
+          const result = distanceInWords(
+            new Date(2015, 0, 1, 0, 0, 15),
+            new Date(2015, 0, 1, 0, 0, 0),
+            ｛includeSeconds: true｝
+          )
+          //=> 'less than 20 seconds'
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+          // 2015年1月1日到2016年1月1日间隔多少？带后缀
+          const result = distanceInWords(
+            new Date(2016, 0, 1),
+            new Date(2015, 0, 1),
+            ｛addSuffix: true｝
+          )
+          //=> 'about 1 year ago'
+        </pre>
+      </blockquote>
+
+      <blockquote>
+        <pre>
+          // 2016年8月1日至2015年1月1日间隔多少？ 国际化
+          const eoLocale = require('date-fns/locale/eo')
+          const result = distanceInWords(
+            new Date(2016, 7, 1),
+            new Date(2015, 0, 1),
+            ｛locale: eoLocale｝
+          )
+          //=> 'pli ol 1 jaro'
+        </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

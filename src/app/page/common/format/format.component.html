@@ -1,0 +1,75 @@
+<div class="format">
+  <app-page-layout>
+    <h2>format</h2>
+    <div class="desc">
+      <span>根据给定格式返回格式化后的日期字符串</span>
+
+      <nz-table #nzTable [nzData]="dataSets" nzBordered [nzPageSize]="50" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>Unit</th>
+          <th>Token</th>
+          <th>Result examples</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of nzTable.data;">
+          <td>{{data.unit}}</td>
+          <td>{{data.token}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+
+      <span class="tip">包装在方括号中的字符被转义。结果可能因地区而异。</span>
+    </div>
+
+
+
+
+
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>String</td>
+        <td>格式化后的日期字符串。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // Represent 11 February 2014 in middle-endian format:
+          var result = format(
+            new Date(2014, 1, 11),
+            'MM/DD/YYYY'
+          )
+          //=> '02/11/2014'
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+          // Represent 2 July 2014 in Esperanto:
+          var eoLocale = require('date-fns/locale/eo')
+          var result = format(
+            new Date(2014, 6, 2),
+            'Do [de] MMMM YYYY',
+            ｛locale: eoLocale｝
+          )
+          //=> '2-a de julio 2014'
+        </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

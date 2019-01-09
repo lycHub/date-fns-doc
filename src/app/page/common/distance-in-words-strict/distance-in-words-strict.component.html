@@ -1,0 +1,120 @@
+<div class="distanceInWordsStrict">
+  <app-page-layout>
+    <h2>distanceInWordsStrict</h2>
+    <div class="desc">
+      <span>用更严谨的单位语言返回给定日期之间的距离。不使用像‘几乎’，‘结束’，‘小于’之类的形容词。</span>
+      <nz-table #basicTable [nzData]="dataSets" [nzShowPagination]="false" [nzPageSize]="20">
+        <thead>
+        <tr>
+          <th>Distance between dates</th>
+          <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{data.distance}}</td>
+          <td>{{data.result}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+
+
+
+
+
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>String</td>
+        <td>给定日期的间隔描述。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // 2014-7-2与2015-1-1相隔多久？
+            var result = distanceInWordsStrict(
+              new Date(2014, 6, 2),
+              new Date(2015, 0, 1)
+            )
+            //=> '6 months'
+          </pre>
+      </blockquote>
+
+      <blockquote>
+          <pre>
+           // 2015年1月1日00:00:15到2015年1月1日00:00:00间隔多少？包括秒
+          var result = distanceInWordsStrict(
+            new Date(2015, 0, 1, 0, 0, 15),
+            new Date(2015, 0, 1, 0, 0, 0),
+          )
+          //=> '15 seconds'
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+          // 2015年1月1日到2016年1月1日间隔多少？带后缀
+          const result = distanceInWordsStrict(
+            new Date(2016, 0, 1),
+            new Date(2015, 0, 1),
+            ｛addSuffix: true｝
+          )
+          //=> '1 year ago'
+        </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+           // 2015年1月1日到2016年1月1日间隔多少？单位：minutes
+          var result = distanceInWordsStrict(
+            new Date(2016, 0, 1),
+            new Date(2015, 0, 1),
+            ｛unit: 'm'｝
+          )
+          //=> '525600 minutes'
+        </pre>
+      </blockquote>
+
+
+      <blockquote>
+        <pre>
+         // 2015年1月1日到2015年1月28日间隔多少？  四舍五入
+        var result = distanceInWordsStrict(
+          new Date(2015, 0, 28),
+          new Date(2015, 0, 1),
+          ｛unit: 'M', partialMethod: 'ceil'｝
+        )
+        //=> '1 month'
+        </pre>
+      </blockquote>
+
+      <blockquote>
+        <pre>
+          // 2016年8月1日至2015年1月1日间隔多少？ 国际化
+          const eoLocale = require('date-fns/locale/eo')
+          const result = distanceInWordsStrict(
+            new Date(2016, 7, 1),
+            new Date(2015, 0, 1),
+            ｛locale: eoLocale｝
+          )
+          //=> '1 jaro'
+        </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -20,6 +20,21 @@ export class AppComponent implements OnInit {
     }, {
       label: 'compareAsc',
       link: '/compareAsc'
+    }, {
+      label: 'compareDesc',
+      link: '/compareDesc'
+    }, {
+      label: 'distanceInWords',
+      link: '/distanceInWords'
+    }, {
+      label: 'distanceInWordsStrict',
+      link: '/distanceInWordsStrict'
+    }, {
+      label: 'distanceInWordsToNow',
+      link: '/distanceInWordsToNow'
+    }, {
+      label: 'format',
+      link: '/format'
     }]
   }, {
     name: 'month',
