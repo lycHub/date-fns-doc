@@ -35,6 +35,12 @@ export class AppComponent implements OnInit {
     }, {
       label: 'format',
       link: '/format'
+    }, {
+      label: 'isAfter',
+      link: '/isAfter'
+    }, {
+      label: 'isBefore',
+      link: '/isBefore'
     }]
   }, {
     name: 'month',

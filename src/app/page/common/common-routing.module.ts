@@ -8,6 +8,8 @@ import {DistanceInWordsComponent} from "./distance-in-words/distance-in-words.co
 import {DistanceInWordsStrictComponent} from "./distance-in-words-strict/distance-in-words-strict.component";
 import {DistanceInWordsToNowComponent} from "./distance-in-words-to-now/distance-in-words-to-now.component";
 import {FormatComponent} from "./format/format.component";
+import {IsAfterComponent} from "./is-after/is-after.component";
+import {IsBeforeComponent} from "./is-before/is-before.component";
 
 const routes: Routes = [
   {path: 'closestIndexTo', component: ClosestIndexToComponent, data: {info: 'common/closestIndexTo'}},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: 'distanceInWordsStrict', component: DistanceInWordsStrictComponent, data: {info: 'common/distanceInWordsStrict'}},
   {path: 'distanceInWordsToNow', component: DistanceInWordsToNowComponent, data: {info: 'common/distanceInWordsToNow'}},
   {path: 'format', component: FormatComponent, data: {info: 'common/format'}},
+  {path: 'isAfter', component: IsAfterComponent, data: {info: 'common/isAfter'}},
+  {path: 'isBefore', component: IsBeforeComponent, data: {info: 'common/isBefore'}},
 ];
 
 @NgModule({

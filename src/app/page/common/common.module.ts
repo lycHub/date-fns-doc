@@ -9,6 +9,8 @@ import { DistanceInWordsComponent } from './distance-in-words/distance-in-words.
 import { DistanceInWordsStrictComponent } from './distance-in-words-strict/distance-in-words-strict.component';
 import { DistanceInWordsToNowComponent } from './distance-in-words-to-now/distance-in-words-to-now.component';
 import { FormatComponent } from './format/format.component';
+import { IsAfterComponent } from './is-after/is-after.component';
+import { IsBeforeComponent } from './is-before/is-before.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { FormatComponent } from './format/format.component';
     DistanceInWordsComponent,
     DistanceInWordsStrictComponent,
     DistanceInWordsToNowComponent,
-    FormatComponent
+    FormatComponent,
+    IsAfterComponent,
+    IsBeforeComponent
   ],
   exports: [
     ClosestIndexToComponent,
@@ -33,7 +37,9 @@ import { FormatComponent } from './format/format.component';
     DistanceInWordsComponent,
     DistanceInWordsStrictComponent,
     DistanceInWordsToNowComponent,
-    FormatComponent
+    FormatComponent,
+    IsAfterComponent,
+    IsBeforeComponent
   ]
 })
 export class CommonModule { }
