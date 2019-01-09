@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './is-before.component.html'
 })
 export class IsBeforeComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {
