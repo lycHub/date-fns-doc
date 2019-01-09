@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
-import {filter, map} from "rxjs/internal/operators";
+import {filter, map, mergeMap} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-root',
@@ -8,36 +8,29 @@ import {filter, map} from "rxjs/internal/operators";
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  title = 'date-fns-docs';
-
   menus = [{
     name: 'common',
     title: '公共（common）',
     children: [{
       label: 'closestIndexTo',
-      link: '/closestIndexTo',
-      // selected: true,
-      parent: 'common'
+      link: '/closestIndexTo'
     }, {
       label: 'closestTo',
-      link: '/closestTo',
-      parent: 'common'
+      link: '/closestTo'
+    }, {
+      label: 'compareAsc',
+      link: '/compareAsc'
     }]
   }, {
     name: 'month',
     title: '月（Month）',
     children: [{
       label: 'closestIndexTo',
-      link: '',
-      parent: 'month'
+      link: ''
     }]
   }];
 
-  // currentInfo: { parent: string; label: string };
-  currentInfo = {
-    parent: 'common',
-    label: 'closestIndexTo'
-  };
+  currentInfo: { parent: string; label: string };
 
 
   constructor(private router: Router, private routerInfo: ActivatedRoute) {
@@ -45,25 +38,21 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /*this.router.events.pipe(filter(event => event instanceof NavigationEnd), map(() => this.routerInfo)).subscribe(res => {
-      res.data.subscribe(ress => {
-        console.log(ress);
-      })
-    });*/
-    /*setTimeout(() => {
-      this.routerInfo.data.subscribe((res) => {
-        console.log(res);
-        /!*   this.currentInfo = {
-             parent: res.parent,
-             label: res.label
-           }
-           console.log(this.currentInfo);*!/
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd),
+        map(() => this.routerInfo), map(route => {
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        return route;
+      }), mergeMap(route => route.data))
+      .subscribe(data => {
+        const info = data.info.split('/', 2);
+        this.currentInfo = {
+          parent: info[0],
+          label: info[1]
+        };
       });
-    }, 2000);*/
-  }
-
-  onClick(child) {
-    console.log(child);
   }
 
   trackBySubs(index: number, sub): string { return sub.title; }

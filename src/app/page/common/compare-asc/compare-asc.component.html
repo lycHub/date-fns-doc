@@ -1,0 +1,50 @@
+<div class="compare-asc">
+  <app-page-layout>
+    <h2>compareAsc</h2>
+    <span class="desc">比较这两个日期，如果第一个日期在第二个日期之后，则返回1；如果第一个日期位于第二个日期之前，则返回-1；如果日期相等，则返回0。</span>
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>比较结果</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           // 比较两个日期
+            const result = compareAsc(
+              new Date(1987, 1, 11),
+              new Date(1989, 6, 10)
+            )
+            //=> -1
+          </pre>
+      </blockquote>
+
+      <blockquote>
+          <pre>
+           // 日期排序
+            var result = [
+              new Date(1995, 6, 2),
+              new Date(1987, 1, 11),
+              new Date(1989, 6, 10)
+            ].sort(compareAsc)
+            //=> [
+            //   Wed Feb 11 1987 00:00:00,
+            //   Mon Jul 10 1989 00:00:00,
+            //   Sun Jul 02 1995 00:00:00
+            // ]
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

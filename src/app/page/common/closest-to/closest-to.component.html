@@ -1,3 +1,51 @@
-<div class="common">
-  closest-to works!
+<div class="closestTo">
+  <app-page-layout [hasException]="true">
+    <h2>closestTo</h2>
+    <span class="desc">与给定日期相比，从数组中返回最接近的日期。</span>
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>从数组中返回最接近的日期。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-table [nzData]="dataSet" class="exceptions">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>TypeError</td>
+        <td>第二个参数必须是数组</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // 返回最接近2015-8-6的日期
+            const dateToCompare = new Date(2015, 8, 6);
+            var result = closestTo(dateToCompare, [
+              new Date(2000, 0, 1),
+              new Date(2030, 0, 1)
+            ])
+            //=> Tue Jan 01 2030 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
 </div>
