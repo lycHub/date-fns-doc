@@ -1,0 +1,32 @@
+<div class="isDate">
+  <app-page-layout>
+    <h2>isDate</h2>
+    <span class="desc">所传参数是否是日期的示例？</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>所传参数是否是日期的示例</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // mayonnaise是Date类型？
+          var result = isDate('mayonnaise')
+          //=> false
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="isEqual">
+  <app-page-layout>
+    <h2>isEqual</h2>
+    <span class="desc">两个日期是否相等</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>两个日期是否相等。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 比较两个日期是否相等
+          var result = isEqual(
+            new Date(2014, 6, 2, 6, 30, 45, 0)
+            new Date(2014, 6, 2, 6, 30, 45, 500)
+          )
+          //=> false
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

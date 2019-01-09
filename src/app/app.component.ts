@@ -41,6 +41,15 @@ export class AppComponent implements OnInit {
     }, {
       label: 'isBefore',
       link: '/isBefore'
+    }, {
+      label: 'isDate',
+      link: '/isDate'
+    }, {
+      label: 'isEqual',
+      link: '/isEqual'
+    }, {
+      label: 'isFeatrue',
+      link: '/isFeatrue'
     }]
   }, {
     name: 'month',

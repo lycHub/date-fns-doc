@@ -11,6 +11,9 @@ import { DistanceInWordsToNowComponent } from './distance-in-words-to-now/distan
 import { FormatComponent } from './format/format.component';
 import { IsAfterComponent } from './is-after/is-after.component';
 import { IsBeforeComponent } from './is-before/is-before.component';
+import { IsDateComponent } from './is-date/is-date.component';
+import { IsEqualComponent } from './is-equal/is-equal.component';
+import { IsFeatrueComponent } from './is-featrue/is-featrue.component';
 
 @NgModule({
   imports: [
@@ -27,7 +30,10 @@ import { IsBeforeComponent } from './is-before/is-before.component';
     DistanceInWordsToNowComponent,
     FormatComponent,
     IsAfterComponent,
-    IsBeforeComponent
+    IsBeforeComponent,
+    IsDateComponent,
+    IsEqualComponent,
+    IsFeatrueComponent
   ],
   exports: [
     ClosestIndexToComponent,
@@ -39,7 +45,10 @@ import { IsBeforeComponent } from './is-before/is-before.component';
     DistanceInWordsToNowComponent,
     FormatComponent,
     IsAfterComponent,
-    IsBeforeComponent
+    IsBeforeComponent,
+    IsDateComponent,
+    IsEqualComponent,
+    IsFeatrueComponent
   ]
 })
 export class CommonModule { }

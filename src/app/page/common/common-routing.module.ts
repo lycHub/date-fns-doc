@@ -10,6 +10,9 @@ import {DistanceInWordsToNowComponent} from "./distance-in-words-to-now/distance
 import {FormatComponent} from "./format/format.component";
 import {IsAfterComponent} from "./is-after/is-after.component";
 import {IsBeforeComponent} from "./is-before/is-before.component";
+import {IsDateComponent} from "./is-date/is-date.component";
+import {IsEqualComponent} from "./is-equal/is-equal.component";
+import {IsFeatrueComponent} from "./is-featrue/is-featrue.component";
 
 const routes: Routes = [
   {path: 'closestIndexTo', component: ClosestIndexToComponent, data: {info: 'common/closestIndexTo'}},
@@ -22,6 +25,9 @@ const routes: Routes = [
   {path: 'format', component: FormatComponent, data: {info: 'common/format'}},
   {path: 'isAfter', component: IsAfterComponent, data: {info: 'common/isAfter'}},
   {path: 'isBefore', component: IsBeforeComponent, data: {info: 'common/isBefore'}},
+  {path: 'isDate', component: IsDateComponent, data: {info: 'common/isDate'}},
+  {path: 'isEqual', component: IsEqualComponent, data: {info: 'common/isEqual'}},
+  {path: 'isFeatrue', component: IsFeatrueComponent, data: {info: 'common/isFeatrue'}},
 ];
 
 @NgModule({
