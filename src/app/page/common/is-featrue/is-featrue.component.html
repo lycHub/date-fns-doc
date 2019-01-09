@@ -1,3 +1,32 @@
-<p>
-  is-featrue works!
-</p>
+<div class="isFuture">
+  <app-page-layout>
+    <h2>isFuture</h2>
+    <span class="desc">所传日期是否在未来</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>日期是否在未来</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 如果今天是2014-10-6, 2014-11-31是否在未来?
+          var result = isFuture(new Date(2014, 11, 31))
+          //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>
