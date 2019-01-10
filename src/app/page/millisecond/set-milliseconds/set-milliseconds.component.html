@@ -1,0 +1,32 @@
+<div class="setMilliseconds">
+  <app-page-layout>
+    <h2>setMilliseconds</h2>
+    <span class="desc">为给定日期设置毫秒数</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置毫秒后的新日期。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // Set 300 milliseconds to 1 September 2014 11:30:40.500:
+          var result = setMilliseconds(new Date(2014, 8, 1, 11, 30, 40, 500), 300)
+          //=> Mon Sep 01 2014 11:30:40.300
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -7,11 +7,31 @@ import { Component, OnInit } from '@angular/core';
 export class DistanceInWordsStrictComponent implements OnInit {
   dataSet = [{}];
 
-  datasets = [
+  dataSets = [
     {
-      distance: '0 ... 30 secs',
-      result : 'less than a minute'
-    }
+      distance: '0 ... 59 secs',
+      result : '[0..59] seconds'
+    },
+    {
+      distance: '1 ... 59 mins',
+      result : '[1..59] minutes'
+    },
+    {
+      distance: '1 ... 23 hrs',
+      result : '[1..23] hours'
+    },
+    {
+      distance: '1 ... 29 days',
+      result : '[1..29] days'
+    },
+    {
+      distance: '1 ... 11 months',
+      result : '[1..11] months'
+    },
+    {
+      distance: '1 ... N years',
+      result : '[1..N] years'
+    },
   ]
   constructor() { }
 

@@ -1,0 +1,60 @@
+<div class="getOverlappingDaysInRanges">
+  <app-page-layout [hasException]="true">
+    <h2>getOverlappingDaysInRanges</h2>
+    <span class="desc">获取两个日期范围内重叠的天数。</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>两个日期范围内重叠的天数。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+
+    <nz-table [nzData]="dataSet" class="exceptions">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Error</td>
+        <td>日期范围的startDate不能在其结束日期之后。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 有3天重叠
+          getOverlappingDaysInRanges(
+            new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 17), new Date(2014, 0, 21)
+          )
+          //=> 3
+          </pre>
+      </blockquote>
+      <blockquote>
+          <pre>
+          // 无重叠
+          getOverlappingDaysInRanges(
+            new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 21), new Date(2014, 0, 21)
+          )
+          //=> 0
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

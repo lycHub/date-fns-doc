@@ -1,0 +1,32 @@
+<div class="addSeconds">
+  <app-page-layout>
+    <h2>addSeconds</h2>
+    <span class="desc">将指定的秒数添加到给定日期</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>添加秒数后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 给 10 July 2014 12:45:00 增加30秒:
+          var result = addSeconds(new Date(2014, 6, 10, 12, 45, 0), 30)
+          //=> Thu Jul 10 2014 12:45:30
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

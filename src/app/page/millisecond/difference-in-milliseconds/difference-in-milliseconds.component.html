@@ -1,0 +1,35 @@
+<div class="differenceInMilliseconds">
+  <app-page-layout>
+    <h2>differenceInMilliseconds</h2>
+    <span class="desc">获取给定日期间的毫秒差</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>毫秒差</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 2 July 2014 12:30:20.600 和 2 July 2014 12:30:21.700 相差多少毫秒?
+          var result = differenceInMilliseconds(
+            new Date(2014, 6, 2, 12, 30, 21, 700),
+            new Date(2014, 6, 2, 12, 30, 20, 600)
+          )
+          //=> 1100
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

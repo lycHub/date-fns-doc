@@ -1,0 +1,61 @@
+<div class="isWithinRange">
+  <app-page-layout [hasException]="true">
+    <h2>isWithinRange</h2>
+    <span class="desc">给定的日期是否在范围内?</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>给定的日期是否在范围内</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+
+    <nz-table [nzData]="dataSet" class="exceptions">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Error</td>
+        <td>startDate不能在endDate之后</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+        // 2014-1-3是否在后两个参数范围内:
+        isWithinRange(
+          new Date(2014, 0, 3), new Date(2014, 0, 1), new Date(2014, 0, 7)
+        )
+        //=> true
+          </pre>
+      </blockquote>
+
+      <blockquote>
+          <pre>
+        // 2014-1-10是否在后两个参数范围内:
+        isWithinRange(
+          new Date(2014, 0, 10), new Date(2014, 0, 1), new Date(2014, 0, 7)
+        )
+        //=> false
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

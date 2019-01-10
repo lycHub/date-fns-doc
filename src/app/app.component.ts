@@ -10,7 +10,7 @@ import {filter, map, mergeMap} from "rxjs/internal/operators";
 export class AppComponent implements OnInit {
   menus = [{
     name: 'common',
-    title: '公共（common）',
+    title: '公共(common)',
     children: [{
       label: 'closestIndexTo',
       link: '/closestIndexTo'
@@ -68,13 +68,64 @@ export class AppComponent implements OnInit {
     }]
   }, {
     name: 'range',
-    title: '范围（Range）',
+    title: '范围(range)',
     children: [{
       label: 'areRangesOverlapping',
       link: '/areRangesOverlapping'
+    }, {
+      label: 'getOverlappingDaysInRanges',
+      link: '/getOverlappingDaysInRanges'
+    }, {
+      label: 'isWithinRange',
+      link: '/isWithinRange'
+    }]
+  }, {
+    name: 'timestamp',
+    title: '时间戳(timestamp)',
+    children: [{
+      label: 'getTime',
+      link: '/getTime'
+    }]
+  }, {
+    name: 'millisecond',
+    title: '毫秒(millisecond)',
+    children: [{
+      label: 'addMilliseconds',
+      link: '/addMilliseconds'
+    }, {
+      label: 'differenceInMilliseconds',
+      link: '/differenceInMilliseconds'
+    }, {
+      label: 'getMilliseconds',
+      link: '/getMilliseconds'
+    }, {
+      label: 'setMilliseconds',
+      link: '/setMilliseconds'
+    }, {
+      label: 'subMilliseconds',
+      link: '/subMilliseconds'
+    }]
+  }, {
+    name: 'second',
+    title: '秒(second)',
+    children: [{
+      label: 'addSeconds',
+      link: '/addSeconds'
+    }, {
+      label: 'differenceInSeconds',
+      link: '/differenceInSeconds'
+    }, {
+      label: 'endOfSecond',
+      link: '/endOfSecond'
+    }, {
+      label: 'getSeconds',
+      link: '/getSeconds'
+    }, {
+      label: 'isSameSecond',
+      link: '/isSameSecond'
     }]
   }];
-
+// millisecond/addMilliseconds
   currentInfo: { parent: string; label: string };
 
 
@@ -102,29 +153,4 @@ export class AppComponent implements OnInit {
 
   trackBySubs(index: number, sub): string { return sub.title; }
   trackBySubChilds(index: number, child): string { return child.label; }
-
-
-  /*get menus(): any[] {
-    return [{
-      open: true,
-      title: '公共（common）',
-      children: [{
-        label: 'closestIndexTo',
-        link: '/closestIndexTo',
-        selected: true,
-        parent: 'common'
-      }, {
-        label: 'closestTo',
-        link: '/closestTo',
-        parent: 'common'
-      }]
-    }, {
-      title: 'Month',
-      children: [{
-        label: 'closestIndexTo',
-        link: '',
-        parent: 'month'
-      }]
-    }];
-  }*/
 }

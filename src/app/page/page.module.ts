@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import {HomeModule} from "./home/home.module";
 import {CommonModule} from "./common/common.module";
 import {RangeModule} from "./range/range.module";
+import {TimestampModule} from "./timestamp/timestamp.module";
+import {MillisecondModule} from "./millisecond/millisecond.module";
+import {SecondModule} from "./second/second.module";
 
 @NgModule({
   imports: [
-    HomeModule, CommonModule, RangeModule
+    HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule
   ],
-  exports: [HomeModule, CommonModule, RangeModule],
+  exports: [HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule],
   declarations: []
 })
 export class PagesModule { }
