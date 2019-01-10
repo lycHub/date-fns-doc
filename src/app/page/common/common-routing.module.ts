@@ -13,6 +13,11 @@ import {IsBeforeComponent} from "./is-before/is-before.component";
 import {IsDateComponent} from "./is-date/is-date.component";
 import {IsEqualComponent} from "./is-equal/is-equal.component";
 import {IsFeatrueComponent} from "./is-featrue/is-featrue.component";
+import {IsPastComponent} from "./is-past/is-past.component";
+import {IsValidComponent} from "./is-valid/is-valid.component";
+import {MaxComponent} from "./max/max.component";
+import {MinComponent} from "./min/min.component";
+import {ParseComponent} from "./parse/parse.component";
 
 const routes: Routes = [
   {path: 'closestIndexTo', component: ClosestIndexToComponent, data: {info: 'common/closestIndexTo'}},
@@ -28,6 +33,11 @@ const routes: Routes = [
   {path: 'isDate', component: IsDateComponent, data: {info: 'common/isDate'}},
   {path: 'isEqual', component: IsEqualComponent, data: {info: 'common/isEqual'}},
   {path: 'isFeatrue', component: IsFeatrueComponent, data: {info: 'common/isFeatrue'}},
+  {path: 'isPast', component: IsPastComponent, data: {info: 'common/isPast'}},
+  {path: 'isValid', component: IsValidComponent, data: {info: 'common/isValid'}},
+  {path: 'max', component: MaxComponent, data: {info: 'common/max'}},
+  {path: 'min', component: MinComponent, data: {info: 'common/min'}},
+  {path: 'parse', component: ParseComponent, data: {info: 'common/parse'}}
 ];
 
 @NgModule({

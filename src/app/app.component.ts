@@ -50,13 +50,28 @@ export class AppComponent implements OnInit {
     }, {
       label: 'isFeatrue',
       link: '/isFeatrue'
+    }, {
+      label: 'isPast',
+      link: '/isPast'
+    }, {
+      label: 'isValid',
+      link: '/isValid'
+    }, {
+      label: 'max',
+      link: '/max'
+    }, {
+      label: 'min',
+      link: '/min'
+    }, {
+      label: 'parse',
+      link: '/parse'
     }]
   }, {
-    name: 'month',
-    title: '月（Month）',
+    name: 'range',
+    title: '范围（Range）',
     children: [{
-      label: 'closestIndexTo',
-      link: ''
+      label: 'areRangesOverlapping',
+      link: '/areRangesOverlapping'
     }]
   }];
 

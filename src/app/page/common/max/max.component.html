@@ -1,0 +1,37 @@
+<div class="max">
+  <app-page-layout>
+    <h2>max</h2>
+    <span class="desc">返回给定日期的最新日期。</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>返回给定日期的最新日期。</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // 哪个参数是最新日期?
+          var result = max(
+            new Date(1989, 6, 10),
+            new Date(1987, 1, 11),
+            new Date(1995, 6, 2),
+            new Date(1990, 0, 1)
+          )
+          //=> Sun Jul 02 1995 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

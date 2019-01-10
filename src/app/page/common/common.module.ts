@@ -14,6 +14,11 @@ import { IsBeforeComponent } from './is-before/is-before.component';
 import { IsDateComponent } from './is-date/is-date.component';
 import { IsEqualComponent } from './is-equal/is-equal.component';
 import { IsFeatrueComponent } from './is-featrue/is-featrue.component';
+import { IsPastComponent } from './is-past/is-past.component';
+import { IsValidComponent } from './is-valid/is-valid.component';
+import { MaxComponent } from './max/max.component';
+import { MinComponent } from './min/min.component';
+import { ParseComponent } from './parse/parse.component';
 
 @NgModule({
   imports: [
@@ -33,7 +38,12 @@ import { IsFeatrueComponent } from './is-featrue/is-featrue.component';
     IsBeforeComponent,
     IsDateComponent,
     IsEqualComponent,
-    IsFeatrueComponent
+    IsFeatrueComponent,
+    IsPastComponent,
+    IsValidComponent,
+    MaxComponent,
+    MinComponent,
+    ParseComponent
   ],
   exports: [
     ClosestIndexToComponent,
@@ -48,7 +58,12 @@ import { IsFeatrueComponent } from './is-featrue/is-featrue.component';
     IsBeforeComponent,
     IsDateComponent,
     IsEqualComponent,
-    IsFeatrueComponent
+    IsFeatrueComponent,
+    IsPastComponent,
+    IsValidComponent,
+    MaxComponent,
+    MinComponent,
+    ParseComponent
   ]
 })
 export class CommonModule { }

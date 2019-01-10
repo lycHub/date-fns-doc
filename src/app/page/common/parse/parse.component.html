@@ -1,0 +1,42 @@
+<div class="parse">
+  <app-page-layout>
+    <h2>parse</h2>
+    <span class="desc">
+      将给定的参数转换为日期的实例。如果参数是Date的实例，则函数将返回其克隆。如果参数是数字，则将其视为时间戳。如果参数是字符串，则函数将尝试解析它。函数接受完整的ISO 8601
+    </span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>本地时区解析后的日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+         // string参数转为Date:
+          var result = parse('2014-02-11T11:30:30')
+          //=> Tue Feb 11 2014 11:30:30
+          </pre>
+      </blockquote>
+      <blockquote>
+          <pre>
+          /// Parse string '+02014101',
+          // 如果扩展年份格式中的额外位数为1:
+          var result = parse('+02014101', ｛additionalDigits: 1｝)
+          //=> Fri Apr 11 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

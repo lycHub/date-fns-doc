@@ -1,0 +1,60 @@
+<div class="isValid">
+  <app-page-layout [hasException]="true">
+    <h2>isValid</h2>
+    <span class="desc">判断所传参数是否为无效日期（Invalid Date）</span>
+
+    <nz-table [nzData]="dataSet" class="return">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>判断所传参数是否为无效日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-table [nzData]="dataSet" class="exceptions">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>TypeError</td>
+        <td>参数必须是Date实例</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+       // For the valid date:
+        var result = isValid(new Date(2014, 1, 31))
+        //=> true
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+          <pre>
+       // For the valid date:
+        var result = isValid(new Date(''))
+        //=> false
+          </pre>
+      </blockquote>
+
+
+    </nz-card>
+  </app-page-layout>
+</div>
