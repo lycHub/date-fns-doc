@@ -7,6 +7,7 @@ import { DifferenceInSecondsComponent } from './difference-in-seconds/difference
 import { EndOfSecondComponent } from './end-of-second/end-of-second.component';
 import { GetSecondsComponent } from './get-seconds/get-seconds.component';
 import { IsSameSecondComponent } from './is-same-second/is-same-second.component';
+import { IsThisSecondComponent } from './is-this-second/is-this-second.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IsSameSecondComponent } from './is-same-second/is-same-second.component
     DifferenceInSecondsComponent,
     EndOfSecondComponent,
     GetSecondsComponent,
-    IsSameSecondComponent
+    IsSameSecondComponent,
+    IsThisSecondComponent
   ],
   imports: [
     ShareModule,
@@ -25,7 +27,8 @@ import { IsSameSecondComponent } from './is-same-second/is-same-second.component
     DifferenceInSecondsComponent,
     EndOfSecondComponent,
     GetSecondsComponent,
-    IsSameSecondComponent
+    IsSameSecondComponent,
+    IsThisSecondComponent
   ]
 })
 export class SecondModule { }

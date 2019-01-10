@@ -123,6 +123,9 @@ export class AppComponent implements OnInit {
     }, {
       label: 'isSameSecond',
       link: '/isSameSecond'
+    }, {
+      label: 'isThisSecond',
+      link: '/isThisSecond'
     }]
   }];
 // millisecond/addMilliseconds
