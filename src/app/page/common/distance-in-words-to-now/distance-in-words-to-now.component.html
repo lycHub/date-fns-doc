@@ -60,7 +60,7 @@
       <blockquote>
           <pre>
           // 如果今天是2015-1-1，那么2014-7-2距今多久?
-          const result = distanceInWordsToNow(
+          var result = distanceInWordsToNow(
             new Date(2014, 6, 2)
           )
           //=> '6 months'
@@ -71,7 +71,7 @@
       <blockquote>
         <pre>
           // 如果今天是2015-1-1  00:00:00，那么2015-1-1 00:00:15距今多久？  包括秒
-          const result = distanceInWordsToNow(
+          var result = distanceInWordsToNow(
             new Date(2015, 0, 1, 0, 0, 15),
             ｛includeSeconds: true｝
           )
@@ -82,7 +82,7 @@
       <blockquote>
         <pre>
          // 如果今天是2015-1-1，那么2016-1-1距今多久？  带后缀
-          const result = distanceInWordsToNow(
+          var result = distanceInWordsToNow(
             new Date(2016, 0, 1),
             ｛addSuffix: true｝
           )
@@ -93,8 +93,8 @@
       <blockquote>
         <pre>
           // 如果今天是2015-1-1，那么2016-8-1距今多久？  国际化
-          const eoLocale = require('date-fns/locale/eo')
-          const result = distanceInWordsToNow(
+          var eoLocale = require('date-fns/locale/eo')
+          var result = distanceInWordsToNow(
             new Date(2016, 7, 1),
             ｛locale: eoLocale｝
           )

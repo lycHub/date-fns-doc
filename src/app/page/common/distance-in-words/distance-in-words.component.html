@@ -60,7 +60,7 @@
       <blockquote>
           <pre>
             // 2014-7-2与2015-1-1相隔多久？
-            const result = distanceInWords(
+            var result = distanceInWords(
               new Date(2014, 6, 2),
               new Date(2015, 0, 1)
             )
@@ -71,7 +71,7 @@
       <blockquote>
           <pre>
            // 2015年1月1日00:00:15到2015年1月1日00:00:00间隔多少？包括秒
-          const result = distanceInWords(
+          var result = distanceInWords(
             new Date(2015, 0, 1, 0, 0, 15),
             new Date(2015, 0, 1, 0, 0, 0),
             ｛includeSeconds: true｝
@@ -84,7 +84,7 @@
       <blockquote>
         <pre>
           // 2015年1月1日到2016年1月1日间隔多少？带后缀
-          const result = distanceInWords(
+          var result = distanceInWords(
             new Date(2016, 0, 1),
             new Date(2015, 0, 1),
             ｛addSuffix: true｝
@@ -96,8 +96,8 @@
       <blockquote>
         <pre>
           // 2016年8月1日至2015年1月1日间隔多少？ 国际化
-          const eoLocale = require('date-fns/locale/eo')
-          const result = distanceInWords(
+          var eoLocale = require('date-fns/locale/eo')
+          var result = distanceInWords(
             new Date(2016, 7, 1),
             new Date(2015, 0, 1),
             ｛locale: eoLocale｝
