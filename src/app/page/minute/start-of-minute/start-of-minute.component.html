@@ -1,0 +1,32 @@
+<div class="startOfMinute">
+  <app-page-layout>
+    <h2>startOfMinute</h2>
+    <span class="desc">返回给定日期的一分钟开始</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>一分钟开始</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+        // The start of a minute for 1 December 2014 22:15:45.400:
+       var result = startOfMinute(new Date(2014, 11, 1, 22, 15, 45, 400))
+       //=> Mon Dec 01 2014 22:15:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

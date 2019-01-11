@@ -1,7 +1,7 @@
-<div class="isSameSecond">
+<div class="isSameHour">
   <app-page-layout [hasException]="true">
-    <h2>isSameSecond</h2>
-    <span class="desc">所传日期是否在同一秒内（即秒数相同）</span>
+    <h2>isSameHour</h2>
+    <span class="desc">给定日期的小时数是否相同？</span>
 
     <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
@@ -13,7 +13,7 @@
       <tbody>
       <tr>
         <td>Boolean</td>
-        <td>日期在同一秒内</td>
+        <td>小时数是否相同</td>
       </tr>
       </tbody>
     </nz-table>
@@ -38,12 +38,9 @@
     <nz-card>
       <blockquote>
           <pre>
-          // 秒数相同?
-          var result = isSameSecond(
-            new Date(2014, 8, 4, 6, 30, 15),
-            new Date(2014, 8, 4, 6, 30, 15, 500)
-          )
-          //=> true
+         // Are 4 September 2014 06:00:00 和 4 September 06:30:00 小时数是否相同?
+         var result = isSameHour(new Date(2014, 8, 4, 6, 0), new Date(2014, 8, 4, 6, 30))
+         //=> true
           </pre>
       </blockquote>
     </nz-card>

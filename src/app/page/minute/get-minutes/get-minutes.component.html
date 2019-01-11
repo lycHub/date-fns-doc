@@ -1,0 +1,32 @@
+<div class="getMinutes">
+  <app-page-layout>
+    <h2>getMinutes</h2>
+    <span class="desc">获取给定日期的分钟数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>分钟数</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           // Get the minutes of 29 February 2012 11:45:05:
+           var result = getMinutes(new Date(2012, 1, 29, 11, 45, 5))
+           //=> 45
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

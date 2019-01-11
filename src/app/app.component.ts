@@ -133,6 +133,62 @@ export class AppComponent implements OnInit {
       label: 'subSeconds',
       link: '/subSeconds'
     }]
+  }, {
+    name: 'minute',
+    title: '分(minute)',
+    children: [{
+      label: 'addMinutes',
+      link: '/addMinutes'
+    }, {
+      label: 'differenceInMinutes',
+      link: '/differenceInMinutes'
+    }, {
+      label: 'endOfMinute',
+      link: '/endOfMinute'
+    }, {
+      label: 'getMinutes',
+      link: '/getMinutes'
+    }, {
+      label: 'isSameMinute',
+      link: '/isSameMinute'
+    }, {
+      label: 'setMinutes',
+      link: '/setMinutes'
+    }, {
+      label: 'startOfMinute',
+      link: '/startOfMinute'
+    }, {
+      label: 'subMinutes',
+      link: '/subMinutes'
+    }]
+  }, {
+    name: 'hour',
+    title: '时(hour)',
+    children: [{
+      label: 'addHours',
+      link: '/addHours'
+    }, {
+      label: 'differenceInHours',
+      link: '/differenceInHours'
+    }, {
+      label: 'endOfHour',
+      link: '/endOfHour'
+    }, {
+      label: 'getHours',
+      link: '/getHours'
+    }, {
+      label: 'isSameHour',
+      link: '/isSameHour'
+    }, {
+      label: 'setHours',
+      link: '/setHours'
+    }, {
+      label: 'startOfHour',
+      link: '/startOfHour'
+    }, {
+      label: 'subHours',
+      link: '/subHours'
+    }]
   }];
 // millisecond/addMilliseconds
   currentInfo: { parent: string; label: string };

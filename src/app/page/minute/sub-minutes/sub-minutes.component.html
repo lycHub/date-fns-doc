@@ -1,7 +1,7 @@
-<div class="isSameSecond">
+<div class="subMinutes">
   <app-page-layout [hasException]="true">
-    <h2>isSameSecond</h2>
-    <span class="desc">所传日期是否在同一秒内（即秒数相同）</span>
+    <h2>subMinutes</h2>
+    <span class="desc">从给定日期减去指定的分钟数。</span>
 
     <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
@@ -12,8 +12,8 @@
       </thead>
       <tbody>
       <tr>
-        <td>Boolean</td>
-        <td>日期在同一秒内</td>
+        <td>Date</td>
+        <td>减去分钟后的新日期</td>
       </tr>
       </tbody>
     </nz-table>
@@ -29,7 +29,7 @@
       <tbody>
       <tr>
         <td>TypeError</td>
-        <td>必须要两个参数</td>
+        <td>必须传两个参数</td>
       </tr>
       </tbody>
     </nz-table>
@@ -38,12 +38,9 @@
     <nz-card>
       <blockquote>
           <pre>
-          // 秒数相同?
-          var result = isSameSecond(
-            new Date(2014, 8, 4, 6, 30, 15),
-            new Date(2014, 8, 4, 6, 30, 15, 500)
-          )
-          //=> true
+           // Subtract 30 minutes from 10 July 2014 12:00:00:
+           var result = subMinutes(new Date(2014, 6, 10, 12, 0), 30)
+           //=> Thu Jul 10 2014 11:30:00
           </pre>
       </blockquote>
     </nz-card>

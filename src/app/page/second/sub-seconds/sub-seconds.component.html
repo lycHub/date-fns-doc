@@ -1,5 +1,5 @@
 <div class="subSeconds">
-  <app-page-layout>
+  <app-page-layout [hasException]="true">
     <h2>subSeconds</h2>
     <span class="desc">为给定日期减去指定的秒数。</span>
 
@@ -14,6 +14,22 @@
       <tr>
         <td>Date</td>
         <td>减去秒数后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-table [nzData]="dataSet" class="exceptions" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>TypeError</td>
+        <td>必须要两个参数</td>
       </tr>
       </tbody>
     </nz-table>

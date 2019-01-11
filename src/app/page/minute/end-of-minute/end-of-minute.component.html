@@ -1,0 +1,32 @@
+<div class="endOfMinute">
+  <app-page-layout>
+    <h2>endOfMinute</h2>
+    <span class="desc">返回给定日期的结束, 最小单位分钟</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>一分钟的结束</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           The end of a minute for 1 December 2014 22:15:45.400:
+           var result = endOfMinute(new Date(2014, 11, 1, 22, 15, 45, 400))
+           //=> Mon Dec 01 2014 22:15:59.999
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

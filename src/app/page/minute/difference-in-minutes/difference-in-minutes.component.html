@@ -1,7 +1,7 @@
-<div class="isSameSecond">
+<div class="differenceInMinutes">
   <app-page-layout [hasException]="true">
-    <h2>isSameSecond</h2>
-    <span class="desc">所传日期是否在同一秒内（即秒数相同）</span>
+    <h2>differenceInMinutes</h2>
+    <span class="desc">获取给定日期之间的分钟数。</span>
 
     <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
@@ -12,8 +12,8 @@
       </thead>
       <tbody>
       <tr>
-        <td>Boolean</td>
-        <td>日期在同一秒内</td>
+        <td>Number</td>
+        <td>分钟数。</td>
       </tr>
       </tbody>
     </nz-table>
@@ -38,12 +38,12 @@
     <nz-card>
       <blockquote>
           <pre>
-          // 秒数相同?
-          var result = isSameSecond(
-            new Date(2014, 8, 4, 6, 30, 15),
-            new Date(2014, 8, 4, 6, 30, 15, 500)
-          )
-          //=> true
+           // 2 July 2014 12:07:59 和 2 July 2014 12:20:00 相差多少分钟?
+           var result = differenceInMinutes(
+             new Date(2014, 6, 2, 12, 20, 0),
+             new Date(2014, 6, 2, 12, 7, 59)
+           )
+           //=> 12
           </pre>
       </blockquote>
     </nz-card>

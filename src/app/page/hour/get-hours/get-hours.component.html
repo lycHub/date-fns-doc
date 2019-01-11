@@ -1,0 +1,32 @@
+<div class="getHours">
+  <app-page-layout>
+    <h2>getHours</h2>
+    <span class="desc">获取给定日期的小时数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>小时数</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+         // 获取 29 February 2012 11:45:00 的小时数:
+         var result = getHours(new Date(2012, 1, 29, 11, 45))
+         //=> 11
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>
