@@ -8,6 +8,8 @@ import { EndOfSecondComponent } from './end-of-second/end-of-second.component';
 import { GetSecondsComponent } from './get-seconds/get-seconds.component';
 import { IsSameSecondComponent } from './is-same-second/is-same-second.component';
 import { IsThisSecondComponent } from './is-this-second/is-this-second.component';
+import { SetSecondsComponent } from './set-seconds/set-seconds.component';
+import { SubSecondsComponent } from './sub-seconds/sub-seconds.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { IsThisSecondComponent } from './is-this-second/is-this-second.component
     EndOfSecondComponent,
     GetSecondsComponent,
     IsSameSecondComponent,
-    IsThisSecondComponent
+    IsThisSecondComponent,
+    SetSecondsComponent,
+    SubSecondsComponent
   ],
   imports: [
     ShareModule,
@@ -28,7 +32,9 @@ import { IsThisSecondComponent } from './is-this-second/is-this-second.component
     EndOfSecondComponent,
     GetSecondsComponent,
     IsSameSecondComponent,
-    IsThisSecondComponent
+    IsThisSecondComponent,
+    SetSecondsComponent,
+    SubSecondsComponent
   ]
 })
 export class SecondModule { }

@@ -2,7 +2,7 @@
   <app-page-layout [hasException]="true">
     <h2>closestIndexTo</h2>
     <span class="desc">与给定日期相比，从数组中返回最接近日期的索引。</span>
-    <nz-table [nzData]="dataSet" class="return">
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
       <tr>
         <th>类型</th>
@@ -18,7 +18,7 @@
     </nz-table>
 
 
-    <nz-table [nzData]="dataSet" class="exceptions">
+    <nz-table [nzData]="dataSet" class="exceptions" [nzShowPagination]="false">
       <thead>
       <tr>
         <th>类型</th>

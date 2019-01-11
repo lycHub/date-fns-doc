@@ -126,6 +126,12 @@ export class AppComponent implements OnInit {
     }, {
       label: 'isThisSecond',
       link: '/isThisSecond'
+    }, {
+      label: 'setSeconds',
+      link: '/setSeconds'
+    }, {
+      label: 'subSeconds',
+      link: '/subSeconds'
     }]
   }];
 // millisecond/addMilliseconds

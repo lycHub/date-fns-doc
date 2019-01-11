@@ -1,7 +1,7 @@
-<div class="isFuture">
+<div class="subSeconds">
   <app-page-layout>
-    <h2>isFuture</h2>
-    <span class="desc">所传日期是否在未来</span>
+    <h2>subSeconds</h2>
+    <span class="desc">为给定日期减去指定的秒数。</span>
 
     <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
@@ -12,8 +12,8 @@
       </thead>
       <tbody>
       <tr>
-        <td>Boolean</td>
-        <td>日期是否在未来</td>
+        <td>Date</td>
+        <td>减去秒数后的新日期</td>
       </tr>
       </tbody>
     </nz-table>
@@ -22,9 +22,9 @@
     <nz-card>
       <blockquote>
           <pre>
-          // 如果今天是2014-10-6, 2014-11-31是否在未来?
-          var result = isFuture(new Date(2014, 11, 31))
-          //=> true
+           // 10 July 2014 12:45:00  减去秒数:
+           var result = subSeconds(new Date(2014, 6, 10, 12, 45, 0), 30)
+           //=> Thu Jul 10 2014 12:44:30
           </pre>
       </blockquote>
     </nz-card>
