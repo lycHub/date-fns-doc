@@ -1,0 +1,32 @@
+<div class="subWeeks">
+  <app-page-layout>
+    <h2>subWeeks</h2>
+    <span class="desc">从给定日期减去指定的周数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>减去周数后的日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+         // Subtract 4 weeks from 1 September 2014:
+          var result = subWeeks(new Date(2014, 8, 1), 4)
+          //=> Mon Aug 04 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

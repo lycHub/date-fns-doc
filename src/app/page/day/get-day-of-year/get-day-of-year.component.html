@@ -1,0 +1,32 @@
+<div class="getDayOfYear">
+  <app-page-layout>
+    <h2>getDayOfYear</h2>
+    <span class="desc">获取给定日期是一年中的第几天。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>给定日期是一年中的第几天</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+      // Which day of the year is 2 July 2014?
+      var result = getDayOfYear(new Date(2014, 6, 2))
+      //=> 183
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

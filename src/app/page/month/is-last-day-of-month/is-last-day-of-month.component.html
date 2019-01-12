@@ -1,0 +1,32 @@
+<div class="isLastDayOfMonth">
+  <app-page-layout>
+    <h2>isLastDayOfMonth</h2>
+    <span class="desc">给定日期是一个月的最后一天吗?</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>是否是一个月的最后一天</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // Is 28 February 2014 the last day of a month?
+            var result = isLastDayOfMonth(new Date(2014, 1, 28))
+            //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

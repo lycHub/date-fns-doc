@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {filter, map, mergeMap} from "rxjs/internal/operators";
+import apiDatas from './api';
 
 @Component({
   selector: 'app-root',
@@ -8,207 +9,38 @@ import {filter, map, mergeMap} from "rxjs/internal/operators";
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  menus = [{
-    name: 'common',
-    title: '公共(common)',
-    children: [{
-      label: 'closestIndexTo',
-      link: '/closestIndexTo'
-    }, {
-      label: 'closestTo',
-      link: '/closestTo'
-    }, {
-      label: 'compareAsc',
-      link: '/compareAsc'
-    }, {
-      label: 'compareDesc',
-      link: '/compareDesc'
-    }, {
-      label: 'distanceInWords',
-      link: '/distanceInWords'
-    }, {
-      label: 'distanceInWordsStrict',
-      link: '/distanceInWordsStrict'
-    }, {
-      label: 'distanceInWordsToNow',
-      link: '/distanceInWordsToNow'
-    }, {
-      label: 'format',
-      link: '/format'
-    }, {
-      label: 'isAfter',
-      link: '/isAfter'
-    }, {
-      label: 'isBefore',
-      link: '/isBefore'
-    }, {
-      label: 'isDate',
-      link: '/isDate'
-    }, {
-      label: 'isEqual',
-      link: '/isEqual'
-    }, {
-      label: 'isFeatrue',
-      link: '/isFeatrue'
-    }, {
-      label: 'isPast',
-      link: '/isPast'
-    }, {
-      label: 'isValid',
-      link: '/isValid'
-    }, {
-      label: 'max',
-      link: '/max'
-    }, {
-      label: 'min',
-      link: '/min'
-    }, {
-      label: 'parse',
-      link: '/parse'
-    }]
-  }, {
-    name: 'range',
-    title: '范围(range)',
-    children: [{
-      label: 'areRangesOverlapping',
-      link: '/areRangesOverlapping'
-    }, {
-      label: 'getOverlappingDaysInRanges',
-      link: '/getOverlappingDaysInRanges'
-    }, {
-      label: 'isWithinRange',
-      link: '/isWithinRange'
-    }]
-  }, {
-    name: 'timestamp',
-    title: '时间戳(timestamp)',
-    children: [{
-      label: 'getTime',
-      link: '/getTime'
-    }]
-  }, {
-    name: 'millisecond',
-    title: '毫秒(millisecond)',
-    children: [{
-      label: 'addMilliseconds',
-      link: '/addMilliseconds'
-    }, {
-      label: 'differenceInMilliseconds',
-      link: '/differenceInMilliseconds'
-    }, {
-      label: 'getMilliseconds',
-      link: '/getMilliseconds'
-    }, {
-      label: 'setMilliseconds',
-      link: '/setMilliseconds'
-    }, {
-      label: 'subMilliseconds',
-      link: '/subMilliseconds'
-    }]
-  }, {
-    name: 'second',
-    title: '秒(second)',
-    children: [{
-      label: 'addSeconds',
-      link: '/addSeconds'
-    }, {
-      label: 'differenceInSeconds',
-      link: '/differenceInSeconds'
-    }, {
-      label: 'endOfSecond',
-      link: '/endOfSecond'
-    }, {
-      label: 'getSeconds',
-      link: '/getSeconds'
-    }, {
-      label: 'isSameSecond',
-      link: '/isSameSecond'
-    }, {
-      label: 'isThisSecond',
-      link: '/isThisSecond'
-    }, {
-      label: 'setSeconds',
-      link: '/setSeconds'
-    }, {
-      label: 'subSeconds',
-      link: '/subSeconds'
-    }]
-  }, {
-    name: 'minute',
-    title: '分(minute)',
-    children: [{
-      label: 'addMinutes',
-      link: '/addMinutes'
-    }, {
-      label: 'differenceInMinutes',
-      link: '/differenceInMinutes'
-    }, {
-      label: 'endOfMinute',
-      link: '/endOfMinute'
-    }, {
-      label: 'getMinutes',
-      link: '/getMinutes'
-    }, {
-      label: 'isSameMinute',
-      link: '/isSameMinute'
-    }, {
-      label: 'isThisMinute',
-      link: '/isThisMinute'
-    }, {
-      label: 'setMinutes',
-      link: '/setMinutes'
-    }, {
-      label: 'startOfMinute',
-      link: '/startOfMinute'
-    }, {
-      label: 'subMinutes',
-      link: '/subMinutes'
-    }]
-  }, {
-    name: 'hour',
-    title: '时(hour)',
-    children: [{
-      label: 'addHours',
-      link: '/addHours'
-    }, {
-      label: 'differenceInHours',
-      link: '/differenceInHours'
-    }, {
-      label: 'endOfHour',
-      link: '/endOfHour'
-    }, {
-      label: 'getHours',
-      link: '/getHours'
-    }, {
-      label: 'isSameHour',
-      link: '/isSameHour'
-    }, {
-      label: 'isThisHour',
-      link: '/isThisHour'
-    }, {
-      label: 'setHours',
-      link: '/setHours'
-    }, {
-      label: 'startOfHour',
-      link: '/startOfHour'
-    }, {
-      label: 'subHours',
-      link: '/subHours'
-    }]
-  }, {
-    name: 'day',
-    title: '日(day)',
-    children: [{
-      label: 'addDays',
-      link: '/addDays',
-    }]
-  }];
-// millisecond/addMilliseconds
-  currentInfo: { parent: string; label: string };
+  menus = [];
+  // currentInfo: { parent: string; label: string };
+  currentInfo = {
+    parent: 'general',
+    label: 'getStart'
+  }
 
 
   constructor(private router: Router, private routerInfo: ActivatedRoute) {
+    // console.log(apiDatas.keys);
+    const category = [];
+    let data = null;
+    apiDatas.forEach(item => {
+      const source = item.category.split(' ')[0];
+      const title = source.charAt(0).toLowerCase() + source.slice(1);
+      if (category.indexOf(title) === -1) {
+        category.push(title);
+      }
+    })
+    // console.log(category);
+    this.menus = [];
 
+    category.forEach(item => {
+      data = {title: item, children: []};
+      data.children = apiDatas.filter(val => {
+        const source = val.category.split(' ')[0];
+        return (source.charAt(0).toLowerCase() + source.slice(1) === item);
+      });
+      if (data.children.length) {
+        this.menus.push(data);
+      }
+    });
   }
 
   ngOnInit(): void {

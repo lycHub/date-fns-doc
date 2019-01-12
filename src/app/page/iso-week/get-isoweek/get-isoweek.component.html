@@ -1,0 +1,32 @@
+<div class="getISOWeek">
+  <app-page-layout>
+    <h2>getISOWeek</h2>
+    <span class="desc">获取给定日期的ISO周。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>ISO周</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+               // Which week of the ISO-week numbering year is 2 January 2005?
+                var result = getISOWeek(new Date(2005, 0, 2))
+                //=> 53
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

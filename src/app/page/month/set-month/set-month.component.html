@@ -1,0 +1,32 @@
+<div class="setMonth">
+  <app-page-layout>
+    <h2>setMonth</h2>
+    <span class="desc">为给定日期设置月份。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置月份后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // Set February to 1 September 2014:
+          var result = setMonth(new Date(2014, 8, 1), 1)
+          //=> Sat Feb 01 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

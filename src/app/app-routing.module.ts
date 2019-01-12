@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CommonModule} from "./page/common/common.module";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/getStart',
     pathMatch: 'full'
   },
   // {path: 'closestIndexTo', loadChildren: './page/common/common.module#CommonModule'}
   // {path: 'closestIndexTo', loadChildren: () => CommonModule},
   // {path: 'closestTo', loadChildren: () => CommonModule}
-  // {path: '**', redirectTo: '/home'}
+  // {path: '**', redirectTo: '/general'}
 ];
 
 @NgModule({

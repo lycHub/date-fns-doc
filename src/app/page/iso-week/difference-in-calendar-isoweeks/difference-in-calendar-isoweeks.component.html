@@ -1,0 +1,35 @@
+<div class="differenceInCalendarISOWeeks">
+  <app-page-layout>
+    <h2>differenceInCalendarISOWeeks</h2>
+    <span class="desc">获取给定日期之间的日历ISO周数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>日历ISO周数</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           // How many calendar ISO weeks are between 6 July 2014 and 21 July 2014?
+            var result = differenceInCalendarISOWeeks(
+              new Date(2014, 6, 21),
+              new Date(2014, 6, 6)
+            )
+            //=> 3
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

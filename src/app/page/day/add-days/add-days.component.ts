@@ -5,8 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './add-days.component.html'
 })
 export class AddDaysComponent implements OnInit {
-
-  constructor() { }
+  dataSet = [{}];
+  constructor() {
+    // this.data = api.pages.filter(item => item.title === 'addDays')[0].content;
+    // this.exceptions = this.data.exceptions || [];
+  }
 
   ngOnInit() {
   }

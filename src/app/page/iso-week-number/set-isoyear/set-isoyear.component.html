@@ -1,0 +1,32 @@
+<div class="setISOYear">
+  <app-page-layout>
+    <h2>setISOYear</h2>
+    <span class="desc">将ISO周编号年份设置为给定日期，保存周数和工作日编号。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置年份后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // Set ISO week-numbering year 2007 to 29 December 2008:
+              var result = setISOYear(new Date(2008, 11, 29), 2007)
+              //=> Mon Jan 01 2007 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

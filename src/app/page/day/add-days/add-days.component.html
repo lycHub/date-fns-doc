@@ -1,7 +1,7 @@
 <div class="addDays">
-  <app-page-layout [hasException]="true">
+  <app-page-layout>
     <h2>addDays</h2>
-    <span class="desc">将指定的分钟数添加到给定日期。</span>
+    <span class="desc">将指定的天数添加到给定日期。</span>
 
     <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
       <thead>
@@ -13,23 +13,7 @@
       <tbody>
       <tr>
         <td>Date</td>
-        <td>添加分钟后的新日期</td>
-      </tr>
-      </tbody>
-    </nz-table>
-
-
-    <nz-table [nzData]="dataSet" class="exceptions" [nzShowPagination]="false">
-      <thead>
-      <tr>
-        <th>类型</th>
-        <th>说明</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>TypeError</td>
-        <td>必须要两个参数</td>
+        <td>增加天数后的新日期</td>
       </tr>
       </tbody>
     </nz-table>
@@ -38,9 +22,9 @@
     <nz-card>
       <blockquote>
           <pre>
-           // 10 July 2014 12:00:00 加30分钟:
-           var result = addMinutes(new Date(2014, 6, 10, 12, 0), 30)
-           //=> Thu Jul 10 2014 12:30:00
+       // Add 10 days to 1 September 2014:
+      var result = addDays(new Date(2014, 8, 1), 10)
+      //=> Thu Sep 11 2014 00:00:00
           </pre>
       </blockquote>
     </nz-card>

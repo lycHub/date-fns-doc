@@ -1,0 +1,32 @@
+<div class="setQuarter">
+  <app-page-layout>
+    <h2>setQuarter</h2>
+    <span class="desc">为给定日期设置季度</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置季度后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // Set the 2nd quarter to 2 July 2014:
+            var result = setQuarter(new Date(2014, 6, 2), 2)
+            //=> Wed Apr 02 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

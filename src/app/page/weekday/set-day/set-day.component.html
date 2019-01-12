@@ -1,0 +1,40 @@
+<div class="setDay">
+  <app-page-layout>
+    <h2>setDay</h2>
+    <span class="desc">为给定日期设置星期几</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+      // Set Sunday to 1 September 2014:
+      var result = setDay(new Date(2014, 8, 1), 0)
+      //=> Sun Aug 31 2014 00:00:00
+          </pre>
+      </blockquote>
+
+      <blockquote>
+          <pre>
+          // If week starts with Monday, set Sunday to 1 September 2014:
+          var result = setDay(new Date(2014, 8, 1), 0, ｛weekStartsOn: 1｝)
+          //=> Sun Sep 07 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -1,0 +1,32 @@
+<div class="subMonths">
+  <app-page-layout>
+    <h2>subMonths</h2>
+    <span class="desc">从给定日期减去指定的月数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>减去月数后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+         // Subtract 5 months from 1 February 2015:
+          var result = subMonths(new Date(2015, 1, 1), 5)
+          //=> Mon Sep 01 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

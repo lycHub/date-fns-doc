@@ -1,0 +1,32 @@
+<div class="setISOWeek">
+  <app-page-layout>
+    <h2>setISOWeek</h2>
+    <span class="desc">将ISO周设置为给定日期，保存工作日号。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置ISO周的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // Set the 53rd ISO week to 7 August 2004:
+              var result = setISOWeek(new Date(2004, 7, 7), 53)
+              //=> Sat Jan 01 2005 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

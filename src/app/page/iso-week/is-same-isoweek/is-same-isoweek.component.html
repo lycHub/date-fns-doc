@@ -1,0 +1,35 @@
+<div class="isSameISOWeek">
+  <app-page-layout>
+    <h2>isSameISOWeek</h2>
+    <span class="desc">给定日期是否在同一ISO周？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>给定日期是否在同一ISO周？</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // Are 1 September 2014 and 7 September 2014 in the same ISO week?
+              var result = isSameISOWeek(
+                new Date(2014, 8, 1),
+                new Date(2014, 8, 7)
+              )
+              //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -1,0 +1,57 @@
+<div class="eachDay">
+  <app-page-layout [hasException]="true">
+    <h2>eachDay</h2>
+    <span class="desc">返回指定范围内的日期数组。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date[]</td>
+        <td>从startDate之日到endDate之日的天数开始的数组</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-table [nzData]="dataSet" class="exceptions" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Error</td>
+        <td>startDate不能在endDate之后</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+      // Each day between 6 October 2014 and 10 October 2014:
+      var result = eachDay(
+        new Date(2014, 9, 6),
+        new Date(2014, 9, 10)
+      )
+      //=> [
+      //   Mon Oct 06 2014 00:00:00,
+      //   Tue Oct 07 2014 00:00:00,
+      //   Wed Oct 08 2014 00:00:00,
+      //   Thu Oct 09 2014 00:00:00,
+      //   Fri Oct 10 2014 00:00:00
+      // ]
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

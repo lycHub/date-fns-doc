@@ -1,0 +1,32 @@
+<div class="getDay">
+  <app-page-layout>
+    <h2>getDay</h2>
+    <span class="desc">获取给定日期是星期几。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>给定日期是星期几</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+         // Which day of the week is 29 February 2012?
+        var result = getDay(new Date(2012, 1, 29))
+        //=> 3
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

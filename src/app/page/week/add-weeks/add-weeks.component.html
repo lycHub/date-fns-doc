@@ -1,0 +1,32 @@
+<div class="addWeeks">
+  <app-page-layout>
+    <h2>addWeeks</h2>
+    <span class="desc">将指定的周数添加到给定日期。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>添加周数后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           // Add 4 weeks to 1 September 2014:
+            var result = addWeeks(new Date(2014, 8, 1), 4)
+            //=> Mon Sep 29 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

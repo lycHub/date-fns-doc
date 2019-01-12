@@ -1,0 +1,35 @@
+<div class="isSameYear">
+  <app-page-layout>
+    <h2>isSameYear</h2>
+    <span class="desc">给定日期的年份是否相同？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>给定日期的年份是否相同</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+             // Are 2 September 2014 and 25 September 2014 in the same year?
+              var result = isSameYear(
+                new Date(2014, 8, 2),
+                new Date(2014, 8, 25)
+              )
+              //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

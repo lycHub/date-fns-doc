@@ -1,0 +1,32 @@
+<div class="isWeekend">
+  <app-page-layout>
+    <h2>isWeekend</h2>
+    <span class="desc">给定的日期是周末吗</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>是周末吗</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+        // Does 5 October 2014 fall on a weekend?
+      var result = isWeekend(new Date(2014, 9, 5))
+      //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -1,0 +1,32 @@
+<div class="isLeapYear">
+  <app-page-layout>
+    <h2>isLeapYear</h2>
+    <span class="desc">给定日期是否是闰年</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>是否是闰年</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // Is 1 September 2012 in the leap year?
+              var result = isLeapYear(new Date(2012, 8, 1))
+              //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

@@ -1,0 +1,32 @@
+<div class="setISODay">
+  <app-page-layout>
+    <h2>setISODay</h2>
+    <span class="desc">将ISO周的日期设置为给定日期。 ISO周从星期一开始。 7是星期日的指数，1是星期一的指数等。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // Set Sunday to 1 September 2014:
+            var result = setISODay(new Date(2014, 8, 1), 7)
+            //=> Sun Sep 07 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

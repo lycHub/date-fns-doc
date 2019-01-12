@@ -1,0 +1,32 @@
+<div class="setYear">
+  <app-page-layout>
+    <h2>setYear</h2>
+    <span class="desc">为给定日期设置年份。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>设置年份后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // Set year 2013 to 1 September 2014:
+            var result = setYear(new Date(2014, 8, 1), 2013)
+            //=> Sun Sep 01 2013 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

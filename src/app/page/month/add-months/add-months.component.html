@@ -1,0 +1,32 @@
+<div class="addMonths">
+  <app-page-layout>
+    <h2>addMonths</h2>
+    <span class="desc">将指定的月数添加到给定日期。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>添加月数后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // Add 5 months to 1 September 2014:
+          var result = addMonths(new Date(2014, 8, 1), 5)
+          //=> Sun Feb 01 2015 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

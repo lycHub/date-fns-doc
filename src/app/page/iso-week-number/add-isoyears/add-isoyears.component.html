@@ -1,0 +1,32 @@
+<div class="addISOYears">
+  <app-page-layout>
+    <h2>addISOYears</h2>
+    <span class="desc">将指定数量的ISO周编号年份添加到给定日期。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+             // Add 5 ISO week-numbering years to 2 July 2010:
+              var result = addISOYears(new Date(2010, 6, 2), 5)
+              //=> Fri Jun 26 2015 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

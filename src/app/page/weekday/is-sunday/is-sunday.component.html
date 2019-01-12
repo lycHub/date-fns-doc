@@ -1,0 +1,32 @@
+<div class="isSunday">
+  <app-page-layout>
+    <h2>isSunday</h2>
+    <span class="desc">给定的日期是星期日吗</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>星期日吗</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+       // Is 21 September 2014 Sunday?
+      var result = isSunday(new Date(2014, 8, 21))
+      //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

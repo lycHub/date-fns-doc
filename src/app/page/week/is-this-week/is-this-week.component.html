@@ -1,0 +1,42 @@
+<div class="isThisWeek">
+  <app-page-layout>
+    <h2>isThisWeek</h2>
+    <span class="desc">给定日期与当前日期在同一周吗？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>给定日期与当前日期是否在同一周</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+       // If today is 25 September 2014, is 21 September 2014 in this week?
+        var result = isThisWeek(new Date(2014, 8, 21))
+        //=> true
+          </pre>
+      </blockquote>
+
+
+      <blockquote>
+          <pre>
+          // If today is 25 September 2014 and week starts with Monday
+          // is 21 September 2014 in this week?
+          var result = isThisWeek(new Date(2014, 8, 21), ｛weekStartsOn: 1｝)
+          //=> false
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

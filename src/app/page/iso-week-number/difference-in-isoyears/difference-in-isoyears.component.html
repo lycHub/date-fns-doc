@@ -1,0 +1,35 @@
+<div class="differenceInISOYears">
+  <app-page-layout>
+    <h2>differenceInISOYears</h2>
+    <span class="desc">获取给定日期之间的完整ISO周编号年份数。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Number</td>
+        <td>年份数</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // How many full ISO week-numbering years are between 1 January 2010 and 1 January 2012?
+              var result = differenceInISOYears(
+                new Date(2012, 0, 1),
+                new Date(2010, 0, 1)
+              )
+              //=> 1
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

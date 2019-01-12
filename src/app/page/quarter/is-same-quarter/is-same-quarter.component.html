@@ -1,0 +1,35 @@
+<div class="getQuarter">
+  <app-page-layout>
+    <h2>getQuarter</h2>
+    <span class="desc">给定日期是否是同一季度？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>否是同一季度</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // Are 1 January 2014 and 8 March 2014 in the same quarter?
+            var result = isSameQuarter(
+              new Date(2014, 0, 1),
+              new Date(2014, 2, 8)
+            )
+            //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

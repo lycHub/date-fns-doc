@@ -1,0 +1,32 @@
+<div class="isFriday">
+  <app-page-layout>
+    <h2>isFriday</h2>
+    <span class="desc">给定的日期是星期五吗</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>星期五吗</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+      // Is 26 September 2014 Friday?
+      var result = isFriday(new Date(2014, 8, 26))
+      //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

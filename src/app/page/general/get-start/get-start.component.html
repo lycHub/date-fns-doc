@@ -1,0 +1,107 @@
+<div class="start common">
+  <h2>Getting Started</h2>
+
+  <section class="section">
+    <h3>Table of Contents</h3>
+    <nz-anchor [nzShowInkInFixed]="true" class="anchor">
+      <nz-link nzHref="#Introduction" nzTitle="Introduction"></nz-link>
+      <nz-link nzHref="#Installation" nzTitle="Installation">
+        <nz-link nzHref="#npm&yarn" nzTitle="npm or yarn"></nz-link>
+        <nz-link nzHref="#Bower" nzTitle="Bower"></nz-link>
+        <nz-link nzHref="#CDN&Download" nzTitle="CDN & Download"></nz-link>
+        <nz-link nzHref="#Releases" nzTitle="GitHub Releases"></nz-link>
+      </nz-link>
+    </nz-anchor>
+  </section>
+
+
+
+  <section class="section">
+    <h3 id="Introduction">Introduction</h3>
+    <div class="txt">
+      date-fns提供了最全面，最简单和一致的工具集，用于在浏览器和Node.js中操作JavaScript日期。
+      date-fns就像是日期的 <a href="https://lodash.com/" target="_blank">lodash</a> 。它适用于<a href="https://date-fns.org/docs/" target="_blank">所有场合的140多种功能</a>
+    </div>
+    <blockquote>
+          <pre>
+            dateFns.format(new Date(2014, 1, 11), 'MM/DD/YYYY')
+            //=> '02/11/2014'
+
+            var dates = [new Date(1995, 6, 2), new Date(1987, 1, 11), new Date(1989, 6, 10)]
+            dates.sort(dateFns.compareAsc)
+            //=> [
+            //   Wed Feb 11 1987 00:00:00,
+            //   Mon Jul 10 1989 00:00:00,
+            //   Sun Jul 02 1995 00:00:00
+            // ]
+          </pre>
+    </blockquote>
+  </section>
+
+
+  <section class="section">
+    <h3 id="Installation">Installation</h3>
+    <div class="txt">
+      该库可作为 <a href="https://www.npmjs.com/package/date-fns" target="_blank">npm</a> 包，Bower包提供，也可通过<a href="http://cdn.date-fns.org/" target="_blank">CDN</a>加载。
+    </div>
+    <div class="block">
+      <h4 id="npm&yarn">npm或yarn：</h4>
+      <blockquote>
+          <pre>
+            npm install date-fns --save
+            #or
+            yarn add date-fns
+          </pre>
+      </blockquote>
+      <h4>使用：</h4>
+      <blockquote>
+          <pre>
+          var isToday = require('date-fns/is_today')
+          isToday(new Date())
+          //=> true
+          </pre>
+      </blockquote>
+    </div>
+
+
+    <div class="block">
+      <h4 id="Bower">Bower：</h4>
+      <blockquote>
+          <pre>
+            bower install date-fns
+          </pre>
+      </blockquote>
+      <h4>将库添加到构建中并通过window.dateFns访问它：</h4>
+      <blockquote>
+          <pre>
+          dateFns.isToday(new Date())
+          //=> true
+          </pre>
+      </blockquote>
+    </div>
+
+
+
+    <div class="block">
+      <h4 id="CDN&Download">CDN：</h4>
+      <blockquote>
+          <pre>
+            可用的CDN列表:
+            http://cdn.date-fns.org/VERSION/date_fns.js
+            http://cdn.date-fns.org/VERSION/date_fns.js.map
+            http://cdn.date-fns.org/VERSION/date_fns.min.js
+            http://cdn.date-fns.org/VERSION/date_fns.min.js.map
+            http://cdn.date-fns.org/VERSION/date_fns_docs.json
+          </pre>
+      </blockquote>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <h3 id="Releases">GitHub Releases</h3>
+    <div class="txt">
+      date-fns可以通过 <a href="https://github.com/date-fns/date-fns/releases" target="_blank">发布页面</a> 获得，您可以在其中下载源代码或单个文件。    </div>
+  </section>
+</div>

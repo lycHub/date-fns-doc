@@ -1,0 +1,32 @@
+<div class="isYesterday">
+  <app-page-layout>
+    <h2>isYesterday</h2>
+    <span class="desc">给定日期是否是昨天？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>是否是昨天</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+    // If today is 6 October 2014, is 5 October 14:00:00 yesterday?
+    var result = isYesterday(new Date(2014, 9, 5, 14, 0))
+    //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

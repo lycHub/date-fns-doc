@@ -14,10 +14,10 @@
       <ul nz-menu [nzMode]="'inline'" [nzTheme]="'dark'" class="menu" *ngIf="currentInfo">
 
 
-        <li nz-submenu *ngFor="let menu of menus; trackBy: trackBySubs" [nzOpen]="menu.name === currentInfo.parent">
+        <li nz-submenu *ngFor="let menu of menus;" [nzOpen]="menu.title === currentInfo.parent">
           <span title>{{menu.title}}</span>
           <ul>
-            <li nz-menu-item *ngFor="let child of menu.children; trackBy: trackBySubChilds" [nzSelected]="child.label === currentInfo.label" [routerLink]="child.link">{{child.label}}</li>
+            <li nz-menu-item *ngFor="let child of menu.children;" [nzSelected]="child.title === currentInfo.label" [routerLink]="'/' + child.title">{{child.title}}</li>
           </ul>
         </li>
 

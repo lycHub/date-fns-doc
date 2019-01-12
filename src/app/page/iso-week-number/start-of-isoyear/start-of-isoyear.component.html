@@ -1,0 +1,32 @@
+<div class="startOfISOYear">
+  <app-page-layout>
+    <h2>startOfISOYear</h2>
+    <span class="desc">返回ISO周编号年份的开始，该年份始终在年度第一个星期四之前3天开始,结果将在当地时区。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>ISO周编号年份的开始</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+            // The start of an ISO week-numbering year for 2 July 2005:
+            var result = startOfISOYear(new Date(2005, 6, 2))
+            //=> Mon Jan 03 2005 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

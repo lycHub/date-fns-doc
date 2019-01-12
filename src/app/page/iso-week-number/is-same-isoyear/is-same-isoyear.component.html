@@ -1,0 +1,35 @@
+<div class="isSameISOYear">
+  <app-page-layout>
+    <h2>isSameISOYear</h2>
+    <span class="desc">给定日期是否在同一ISO周编号年份？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>给定日期是否在同一ISO周编号年份</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+              // Are 29 December 2003 and 2 January 2005 in the same ISO week-numbering year?
+              var result = isSameISOYear(
+                new Date(2003, 11, 29),
+                new Date(2005, 0, 2)
+              )
+              //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

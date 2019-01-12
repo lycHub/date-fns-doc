@@ -1,0 +1,32 @@
+<div class="endOfYesterday">
+  <app-page-layout>
+    <h2>endOfYesterday</h2>
+    <span class="desc">昨天的结束。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>昨天的结束</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+     // If today is 6 October 2014:
+      var result = endOfYesterday()
+      //=> Sun Oct 5 2014 23:59:59.999
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

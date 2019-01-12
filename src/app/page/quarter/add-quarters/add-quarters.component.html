@@ -1,0 +1,32 @@
+<div class="addQuarters">
+  <app-page-layout>
+    <h2>addQuarters</h2>
+    <span class="desc">将指定的季度添加到给定日期。</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Date</td>
+        <td>添加季度后的新日期</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+
+    <nz-card>
+      <blockquote>
+          <pre>
+          // Add 1 quarter to 1 September 2014:
+          var result = addQuarters(new Date(2014, 8, 1), 1)
+          //=> Mon Dec 01 2014 00:00:00
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>
