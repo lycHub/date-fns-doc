@@ -1,6 +1,7 @@
 # DateFnsDocs
 
-date-fns中文文档，[Angular7](https://www.angular.cn/) + [NG-ZORRO](https://ng.ant.design/docs/introduce/zh)构建
+date-fns v 1.30.1 中文文档，[Angular](https://www.angular.cn/) + [NG-ZORRO](https://ng.ant.design/docs/introduce/zh)。
+2.0正式版发布后会同步更新...
 
 ## Development server
 
