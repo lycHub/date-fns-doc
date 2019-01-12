@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class MaxComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {

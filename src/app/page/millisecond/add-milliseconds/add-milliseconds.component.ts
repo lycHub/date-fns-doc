@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './add-milliseconds.component.html'
 })
 export class AddMillisecondsComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --optimization --prod --extract-css --progress",
+    "build": "ng build --optimization --prod --extract-css --progress --base-href /date-fns-doc/dist/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

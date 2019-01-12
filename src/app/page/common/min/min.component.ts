@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './min.component.html'
 })
 export class MinComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {
