@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './is-this-hour.component.html'
 })
 export class IsThisHourComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {
