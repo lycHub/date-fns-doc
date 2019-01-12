@@ -10,6 +10,7 @@ import { IsSameMinuteComponent } from './is-same-minute/is-same-minute.component
 import { SetMinutesComponent } from './set-minutes/set-minutes.component';
 import { StartOfMinuteComponent } from './start-of-minute/start-of-minute.component';
 import { SubMinutesComponent } from './sub-minutes/sub-minutes.component';
+import { IsThisMinuteComponent } from './is-this-minute/is-this-minute.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SubMinutesComponent } from './sub-minutes/sub-minutes.component';
     IsSameMinuteComponent,
     SetMinutesComponent,
     StartOfMinuteComponent,
-    SubMinutesComponent
+    SubMinutesComponent,
+    IsThisMinuteComponent
   ],
   imports: [
     ShareModule,
@@ -34,7 +36,8 @@ import { SubMinutesComponent } from './sub-minutes/sub-minutes.component';
     IsSameMinuteComponent,
     SetMinutesComponent,
     StartOfMinuteComponent,
-    SubMinutesComponent
+    SubMinutesComponent,
+    IsThisMinuteComponent
   ]
 })
 export class MinuteModule { }

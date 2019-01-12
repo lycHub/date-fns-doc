@@ -8,6 +8,7 @@ import {IsSameHourComponent} from "./is-same-hour/is-same-hour.component";
 import {SetHoursComponent} from "./set-hours/set-hours.component";
 import {StartOfHourComponent} from "./start-of-hour/start-of-hour.component";
 import {SubHoursComponent} from "./sub-hours/sub-hours.component";
+import {IsThisHourComponent} from "./is-this-hour/is-this-hour.component";
 
 const routes: Routes = [
   {path: 'addHours', component: AddHoursComponent, data: {info: 'hour/addHours'}},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'endOfHour', component: EndOfHourComponent, data: {info: 'hour/endOfHour'}},
   {path: 'getHours', component: GetHoursComponent, data: {info: 'hour/getHours'}},
   {path: 'isSameHour', component: IsSameHourComponent, data: {info: 'hour/isSameHour'}},
+  {path: 'isThisHour', component: IsThisHourComponent, data: {info: 'hour/isThisHour'}},
   {path: 'setHours', component: SetHoursComponent, data: {info: 'hour/setHours'}},
   {path: 'startOfHour', component: StartOfHourComponent, data: {info: 'hour/startOfHour'}},
   {path: 'subHours', component: SubHoursComponent, data: {info: 'hour/subHours'}},

@@ -10,6 +10,7 @@ import { IsSameHourComponent } from './is-same-hour/is-same-hour.component';
 import { SetHoursComponent } from './set-hours/set-hours.component';
 import { StartOfHourComponent } from './start-of-hour/start-of-hour.component';
 import { SubHoursComponent } from './sub-hours/sub-hours.component';
+import { IsThisHourComponent } from './is-this-hour/is-this-hour.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SubHoursComponent } from './sub-hours/sub-hours.component';
     IsSameHourComponent,
     SetHoursComponent,
     StartOfHourComponent,
-    SubHoursComponent
+    SubHoursComponent,
+    IsThisHourComponent
   ],
   imports: [
     ShareModule,
@@ -34,7 +36,8 @@ import { SubHoursComponent } from './sub-hours/sub-hours.component';
     IsSameHourComponent,
     SetHoursComponent,
     StartOfHourComponent,
-    SubHoursComponent
+    SubHoursComponent,
+    IsThisHourComponent
   ]
 })
 export class HourModule { }

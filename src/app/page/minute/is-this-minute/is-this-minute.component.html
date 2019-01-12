@@ -1,0 +1,32 @@
+<div class="isThisMinute">
+  <app-page-layout>
+    <h2>isThisMinute</h2>
+    <span class="desc">给定日期与当前日期在同一分钟？</span>
+
+    <nz-table [nzData]="dataSet" class="return" [nzShowPagination]="false">
+      <thead>
+      <tr>
+        <th>类型</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boolean</td>
+        <td>日期是否在这一分钟</td>
+      </tr>
+      </tbody>
+    </nz-table>
+
+    <nz-card>
+      <blockquote>
+          <pre>
+           // If now is 25 September 2014 18:30:15.500,
+          // is 25 September 2014 18:30:00 in this minute?
+          var result = isThisMinute(new Date(2014, 8, 25, 18, 30))
+          //=> true
+          </pre>
+      </blockquote>
+    </nz-card>
+  </app-page-layout>
+</div>

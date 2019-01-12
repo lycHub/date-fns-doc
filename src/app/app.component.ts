@@ -152,6 +152,9 @@ export class AppComponent implements OnInit {
       label: 'isSameMinute',
       link: '/isSameMinute'
     }, {
+      label: 'isThisMinute',
+      link: '/isThisMinute'
+    }, {
       label: 'setMinutes',
       link: '/setMinutes'
     }, {
@@ -180,6 +183,9 @@ export class AppComponent implements OnInit {
       label: 'isSameHour',
       link: '/isSameHour'
     }, {
+      label: 'isThisHour',
+      link: '/isThisHour'
+    }, {
       label: 'setHours',
       link: '/setHours'
     }, {
@@ -188,6 +194,13 @@ export class AppComponent implements OnInit {
     }, {
       label: 'subHours',
       link: '/subHours'
+    }]
+  }, {
+    name: 'day',
+    title: '日(day)',
+    children: [{
+      label: 'addDays',
+      link: '/addDays',
     }]
   }];
 // millisecond/addMilliseconds

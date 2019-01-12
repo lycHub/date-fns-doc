@@ -7,12 +7,13 @@ import {MillisecondModule} from "./millisecond/millisecond.module";
 import {SecondModule} from "./second/second.module";
 import {MinuteModule} from "./minute/minute.module";
 import {HourModule} from "./hour/hour.module";
+import {DayModule} from "./day/day.module";
 
 @NgModule({
   imports: [
-    HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule, MinuteModule, HourModule
+    HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule, MinuteModule, HourModule, DayModule
   ],
-  exports: [HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule, MinuteModule, HourModule],
+  exports: [HomeModule, CommonModule, RangeModule, TimestampModule, MillisecondModule, SecondModule, MinuteModule, HourModule, DayModule],
   declarations: []
 })
 export class PagesModule { }
