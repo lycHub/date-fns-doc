@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'isBefore', component: IsBeforeComponent, data: {info: 'common/isBefore'}},
   {path: 'isDate', component: IsDateComponent, data: {info: 'common/isDate'}},
   {path: 'isEqual', component: IsEqualComponent, data: {info: 'common/isEqual'}},
-  {path: 'isFeatrue', component: IsFeatrueComponent, data: {info: 'common/isFeatrue'}},
+  {path: 'isFuture', component: IsFeatrueComponent, data: {info: 'common/isFuture'}},
   {path: 'isPast', component: IsPastComponent, data: {info: 'common/isPast'}},
   {path: 'isValid', component: IsValidComponent, data: {info: 'common/isValid'}},
   {path: 'max', component: MaxComponent, data: {info: 'common/max'}},

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './is-featrue.component.html'
 })
 export class IsFeatrueComponent implements OnInit {
-
+  dataSet = [{}];
   constructor() { }
 
   ngOnInit() {
